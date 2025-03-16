@@ -112,7 +112,7 @@ python populate_database.py --reset
 ```sh
 # Execute from image/src directory
 cd image/src
-python rag_app/query_rag.py "how much does a landing page cost?"
+python rag_app/query_rag.py "What age do patients experience PD symptom onset?"
 ```
 
 Example output:
@@ -120,8 +120,13 @@ Example output:
 ```text
 Answer the question based on the above context: How much does a landing page cost to develop?
 
-Response:  Based on the context provided, the cost for a landing page service offered by Galaxy Design Agency is $4,820. Specifically, under the "Our Services" section, it states "Landing Page for Small Businesses ($4,820)" when describing the landing page service. So the cost listed for a landing page is $4,820.
-Sources: ['src/data/source/galaxy-design-client-guide.pdf:1:0', 'src/data/source/galaxy-design-client-guide.pdf:7:0', 'src/data/source/galaxy-design-client-guide.pdf:7:1']
+Response:  Based on availaable literature, Parkinson's disease predominantly affects individuals between the age of 50 and 60.
+Sources: [
+src/data/source/Zanini_et_al_2024_PMC11870126.pdf:0:2,
+src/data/source/Zanini_et_al_2024_PMC11870126.pdf:0:1,
+src/data/source/Dorszewska_et_al_2025_PMC11883390.pdf:0:7,
+src/data/source/Naamneh-Abuelhija_et_al_2025_PMC11880477.pdf:1:6,
+src/data/source/Rosal_et_al_2025_PMC11882537.pdf:0:5']
 ```
 
 ### Starting FastAPI Server
