@@ -85,7 +85,7 @@ Create a file named `.env` in `image/`. Do NOT commit the file to `.git`. The fi
 
 AWS_ACCESS_KEY_ID=XXXXX
 AWS_SECRET_ACCESS_KEY=XXXXX
-AWS_DEFAULT_REGION=us-east-1
+AWS_DEFAULT_REGION=eu-central-1
 TABLE_NAME=YourTableName
 
 This will be used by Docker for when we want to test the image locally. The AWS keys are just your normal AWS credentials and region you want to run this in (even when running locally you will still need access to Bedrock LLM and to the DynamoDB table to write/read the data).
@@ -195,7 +195,7 @@ I have put all the AWS CDK files into `rag-cdk-infra/`. Go into the folder and i
 npm install
 ```
 
-Then run this command to deploy it (assuming you have AWS CLI already set up, and AWS CDK already bootstrapped). I recommend deploying to `us-east-1` to start with (since all the AI models are there).
+Then run this command to deploy it (assuming you have AWS CLI already set up, and AWS CDK already bootstrapped). 
 
 ```sh
 cdk deploy
