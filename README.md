@@ -84,8 +84,11 @@ You need to have an AWS account, and AWS CLI set up on your machine. You'll also
 Create a file named `.env` in `image/`. Do NOT commit the file to `.git`. The file should have content like this:
 
 AWS_ACCESS_KEY_ID=XXXXX
+
 AWS_SECRET_ACCESS_KEY=XXXXX
+
 AWS_DEFAULT_REGION=eu-central-1
+
 TABLE_NAME=YourTableName
 
 This will be used by Docker for when we want to test the image locally. The AWS keys are just your normal AWS credentials and region you want to run this in (even when running locally you will still need access to Bedrock LLM and to the DynamoDB table to write/read the data).
